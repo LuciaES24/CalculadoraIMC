@@ -6,4 +6,5 @@
     </style>
 
     <style name="Theme.CalculadoraIMC" parent="Base.Theme.CalculadoraIMC" />
+
 </resources>
