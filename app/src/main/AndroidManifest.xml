@@ -13,6 +13,21 @@
         android:theme="@style/Theme.CalculadoraIMC"
         tools:targetApi="31">
         <activity
+            android:name=".IMCResultadoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CalcJorgeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CalcJoseLuisActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CalcLuciaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".IMCActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
