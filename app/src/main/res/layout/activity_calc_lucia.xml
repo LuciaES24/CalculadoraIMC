@@ -4,6 +4,241 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CalcLuciaActivity">
+    tools:context=".CalcLuciaActivity"
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/mostrarCalculos"
+        android:layout_width="425dp"
+        android:layout_height="222dp"
+        android:editable="false"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        tools:ignore="MissingConstraints"/>
+
+    <LinearLayout
+        android:id="@+id/columna1"
+        android:layout_width="110dp"
+        android:layout_height="354dp"
+        android:orientation="vertical"
+        android:paddingLeft="22dp"
+        app:layout_constraintTop_toBottomOf="@id/mostrarCalculos"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/boton1"
+            android:layout_width="wrap_content"
+            android:layout_height="89dp"
+            android:width="75dp"
+            android:height="75dp"
+            android:text="@string/boton1"
+            android:textSize="50sp"></Button>
+
+        <Button
+            android:id="@+id/boton4"
+            android:layout_width="wrap_content"
+            android:layout_height="89dp"
+            android:width="75dp"
+            android:height="75dp"
+            android:text="@string/boton4"
+            android:textSize="50sp"></Button>
+
+        <Button
+            android:id="@+id/boton7"
+            android:layout_width="wrap_content"
+            android:layout_height="89dp"
+            android:width="75dp"
+            android:height="75dp"
+            android:text="@string/boton7"
+            android:textSize="50sp"></Button>
+
+        <Button
+            android:id="@+id/decimal"
+            android:layout_width="wrap_content"
+            android:layout_height="89dp"
+            android:width="75dp"
+            android:height="75dp"
+            android:text="@string/botonDecimal"
+            android:textSize="50sp"></Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/columna2"
+        android:layout_width="94dp"
+        android:layout_height="354dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/columna1"
+        app:layout_constraintTop_toBottomOf="@id/mostrarCalculos"
+        tools:ignore="MissingConstraints"
+        android:paddingLeft="16dp">
+
+        <Button
+            android:id="@+id/boton2"
+            android:layout_width="wrap_content"
+            android:layout_height="89dp"
+            android:width="75dp"
+            android:height="75dp"
+            android:text="@string/boton2"
+            android:textSize="50sp"></Button>
+
+        <Button
+            android:id="@+id/boton5"
+            android:layout_width="wrap_content"
+            android:layout_height="89dp"
+            android:width="75dp"
+            android:height="75dp"
+            android:text="@string/boton5"
+            android:textSize="50sp"></Button>
+
+        <Button
+            android:id="@+id/boton8"
+            android:layout_width="wrap_content"
+            android:layout_height="89dp"
+            android:width="75dp"
+            android:height="75dp"
+            android:text="@string/boton8"
+            android:textSize="50sp"></Button>
+
+        <Button
+            android:id="@+id/boton0"
+            android:layout_width="wrap_content"
+            android:layout_height="89dp"
+            android:width="75dp"
+            android:height="75dp"
+            android:text="@string/boton0"
+            android:textSize="50sp"></Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/columna3"
+        android:layout_width="96dp"
+        android:layout_height="354dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/columna2"
+        app:layout_constraintTop_toBottomOf="@id/mostrarCalculos"
+        tools:ignore="MissingConstraints"
+        android:paddingLeft="16dp"
+        >
+
+        <Button
+            android:id="@+id/boton3"
+            android:layout_width="wrap_content"
+            android:layout_height="89dp"
+            android:width="75dp"
+            android:height="75dp"
+            android:text="@string/boton3"
+            android:textSize="50sp"></Button>
+
+        <Button
+            android:id="@+id/boton6"
+            android:layout_width="wrap_content"
+            android:layout_height="89dp"
+            android:width="75dp"
+            android:height="75dp"
+            android:text="@string/boton6"
+            android:textSize="50sp"></Button>
+
+        <Button
+            android:id="@+id/boton9"
+            android:layout_width="wrap_content"
+            android:layout_height="89dp"
+            android:width="75dp"
+            android:height="75dp"
+            android:text="@string/boton9"
+            android:textSize="50sp"></Button>
+
+        <Button
+            android:id="@+id/botonRestar"
+            android:layout_width="wrap_content"
+            android:layout_height="89dp"
+            android:width="75dp"
+            android:height="75dp"
+            android:text="@string/botonRestar"
+            android:textSize="50sp"></Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/columna4"
+        android:layout_width="95dp"
+        android:layout_height="354dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/columna3"
+        app:layout_constraintTop_toBottomOf="@id/mostrarCalculos"
+        tools:ignore="MissingConstraints"
+        android:paddingLeft="16dp">
+
+        <Button
+            android:id="@+id/DEL"
+            android:layout_width="wrap_content"
+            android:layout_height="89dp"
+            android:width="75dp"
+            android:height="75dp"
+            android:textColor="@android:color/holo_blue_light"
+            android:text="@string/btnBorrar"
+            android:textSize="40sp"></Button>
+
+        <Button
+            android:id="@+id/botonDividir"
+            android:layout_width="wrap_content"
+            android:layout_height="89dp"
+            android:width="75dp"
+            android:height="75dp"
+            android:text="@string/botonDividir"
+            android:textSize="50sp"></Button>
+
+        <Button
+            android:id="@+id/botonmultiplicar"
+            android:layout_width="wrap_content"
+            android:layout_height="89dp"
+            android:width="75dp"
+            android:height="75dp"
+            android:text="@string/botonMultiplicar"
+            android:textSize="50sp"></Button>
+
+        <Button
+            android:id="@+id/botonSumar"
+            android:layout_width="wrap_content"
+            android:layout_height="89dp"
+            android:width="75dp"
+            android:height="75dp"
+            android:text="@string/botonSuma"
+            android:textSize="50sp"></Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/filaFinal"
+        android:layout_width="416dp"
+        android:layout_height="99dp"
+        android:orientation="horizontal"
+        android:paddingLeft="23dp"
+        app:layout_constraintTop_toBottomOf="@id/columna2"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/botonCE"
+            android:layout_width="181dp"
+            android:layout_height="match_parent"
+            android:width="75dp"
+            android:height="75dp"
+            android:text="@string/botonCE"
+            android:layout_marginRight="10dp"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="35sp"></Button>
+
+        <Button
+            android:id="@+id/botonIgual"
+            android:layout_width="181dp"
+            android:layout_height="match_parent"
+            android:width="75dp"
+            android:height="75dp"
+            android:text="@string/botonIgual"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="50sp"></Button>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
