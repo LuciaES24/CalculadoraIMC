@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.lespsan543.calculadoraimc"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.lespsan543.calculadoraimc"
