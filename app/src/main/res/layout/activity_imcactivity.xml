@@ -64,7 +64,7 @@
                 android:src="@drawable/_ddec5c682d43f7f034c4858239ffc91" />
             <!--Texto Femenino-->
             <TextView
-                android:id="@+id/texoMujer"
+                android:id="@+id/textoMujer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/mujer"
@@ -91,19 +91,20 @@
             android:gravity="center_horizontal">
 
             <TextView
-                android:id="@+id/TextoAlturaNombre"
+                android:id="@+id/textoAlturaNombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/altura"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
+
             <TextView
-                android:id="@+id/TextoAlturaNumero"
-                android:layout_width="wrap_content"
+                android:id="@+id/textoAlturaNumero"
+                android:layout_width="21dp"
                 android:layout_height="wrap_content"
-                android:text="@string/NumeroAlturta"
-                android:textSize="50sp"
-                android:textColor="@color/white"/>
+                android:text="@string/NumeroAltura"
+                android:textColor="@color/white"
+                android:textSize="50sp" />
 
             <com.google.android.material.slider.RangeSlider
                 android:id="@+id/barra"
@@ -129,7 +130,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/TextoPesoNombre"
+                android:id="@+id/textoPesoNombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/peso"
@@ -137,7 +138,7 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/TextoPesoNumero"
+                android:id="@+id/textoPesoNumero"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/numeroPeso"
@@ -184,14 +185,14 @@
             android:gravity="center_horizontal"
             android:orientation="vertical">
             <TextView
-                android:id="@+id/TextoEdadNombre"
+                android:id="@+id/textoEdadNombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/edad"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
             <TextView
-                android:id="@+id/TextoEdadNumero"
+                android:id="@+id/textoEdadNumero"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/NumeroEdad"
@@ -204,7 +205,7 @@
                 android:gravity="center_horizontal"
                 android:orientation="horizontal">
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/boto2Restar"
+                    android:id="@+id/boton2Restar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
