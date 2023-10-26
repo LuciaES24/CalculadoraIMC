@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
+    <!--Primer CardView-->
     <androidx.cardview.widget.CardView
         android:id="@+id/hombre"
         android:layout_width="0dp"
@@ -16,28 +16,25 @@
         app:layout_constraintEnd_toStartOf="@+id/mujer"
         app:layout_constraintTop_toTopOf="parent"
         app:cardCornerRadius="8dp">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center_horizontal">
-
+            <!--Imagen logo masculino-->
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="112dp"
                 android:contentDescription="@string/logo_masculino"
-                android:src="@drawable/pngtree_vector_male_sign_icon_png_image_924891" />
-
+                android:src="@drawable/male_s_mbolo_svg" />
+            <!--Texto masculino-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/hombre"
-                android:textSize="18sp"/>
-
+                android:textSize="20sp"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
     <!-- Segundo CardView -->
     <androidx.cardview.widget.CardView
         android:id="@+id/mujer"
@@ -47,27 +44,25 @@
         app:layout_constraintStart_toEndOf="@+id/hombre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:cardCornerRadius="8dp"
-        app:cardBackgroundColor="#33FF57">
+        app:cardCornerRadius="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center_horizontal">
-
+            <!--Imagen logo Femenino-->
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_launcher_foreground"
-                android:contentDescription="Image" />
-
+                android:layout_width="148dp"
+                android:layout_height="111dp"
+                android:contentDescription="Image"
+                android:src="@drawable/_ddec5c682d43f7f034c4858239ffc91" />
+            <!--Texto Femenino-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/mujer"
-                android:textSize="18sp" />
-
+                android:textSize="20sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
     <!-- Tercer CardView -->
@@ -92,8 +87,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/altura"
-                android:textSize="20sp"
-                />
+                android:textColor="@color/black"
+                android:textSize="20sp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -105,9 +100,70 @@
                 android:id="@+id/barra"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
-
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+    <!--Cuarta CardView-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/peso"
+        android:layout_width="153dp"
+        android:layout_height="176dp"
+        android:layout_marginTop="28dp"
+
+        app:layout_constraintStart_toStartOf="@+id/hombre"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/peso"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/numeroPeso"
+                android:textColor="@color/white"
+                android:textSize="50sp" />
+
+            <LinearLayout
+                android:layout_width="153dp"
+                android:layout_height="82dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/botonResultado"
+        android:layout_width="301dp"
+        android:layout_height="48dp"
+        android:text="@string/Calcular"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/cardView3"
+        app:layout_constraintStart_toStartOf="@+id/peso"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="592dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

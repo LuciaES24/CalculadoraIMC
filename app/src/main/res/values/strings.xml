@@ -24,4 +24,7 @@
     <string name="hombre">HOMBRE</string>
     <string name="mujer">MUJER</string>
     <string name="logo_masculino">logo_masculino</string>
+    <string name="peso">Peso</string>
+    <string name="numeroPeso">60</string>
+    <string name="Calcular">Calcular</string>
 </resources>
