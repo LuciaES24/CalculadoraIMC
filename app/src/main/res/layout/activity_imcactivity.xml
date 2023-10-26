@@ -108,7 +108,7 @@
             <com.google.android.material.slider.RangeSlider
                 android:id="@+id/barra"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
     <!--Cuarta CardView-->
@@ -118,7 +118,8 @@
         android:layout_height="176dp"
         android:layout_marginTop="28dp"
         app:layout_constraintStart_toStartOf="@+id/hombre"
-        app:layout_constraintTop_toBottomOf="@+id/altura">
+        app:layout_constraintTop_toBottomOf="@+id/altura"
+        app:cardCornerRadius="8dp">
 
         <LinearLayout
             android:id="@+id/cajonPeso"
@@ -132,7 +133,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/peso"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="20sp" />
 
             <TextView
@@ -140,16 +141,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/numeroPeso"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="50sp" />
-
             <LinearLayout
                 android:id="@+id/cajonBotones1"
                 android:layout_width="153dp"
                 android:layout_height="82dp"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal">
-
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/boton1Restar"
                     android:layout_width="wrap_content"
@@ -158,7 +157,6 @@
                     android:contentDescription="@string/resta1"
                     android:src="@drawable/baseline_exposure_neg_1_24"
                     android:tint="@color/orange"/>
-
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/boton1Sumar"
                     android:layout_width="wrap_content"
@@ -168,12 +166,63 @@
                     android:src="@drawable/baseline_exposure_plus_1_24"
                     android:tint="@color/blue"/>
             </LinearLayout>
-
         </LinearLayout>
-
-
     </androidx.cardview.widget.CardView>
-
+    <!--Quinta CardView-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/edad"
+        android:layout_width="153dp"
+        android:layout_height="173dp"
+        app:layout_constraintEnd_toEndOf="@+id/mujer"
+        app:layout_constraintStart_toStartOf="@+id/mujer"
+        app:layout_constraintTop_toTopOf="@+id/peso"
+        app:cardCornerRadius="8dp">
+        <LinearLayout
+            android:id="@+id/cajaEdad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/TextoEdadNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/edad"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/TextoEdadNumero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/NumeroEdad"
+                android:textColor="@color/black"
+                android:textSize="50sp" />
+            <LinearLayout
+                android:id="@+id/cajonBotones2"
+                android:layout_width="153dp"
+                android:layout_height="82dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/boto2Restar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/resta1"
+                    android:src="@drawable/baseline_exposure_neg_1_24"
+                    android:tint="@color/orange"/>
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/boton2Sumar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/suma1"
+                    android:src="@drawable/baseline_exposure_plus_1_24"
+                    android:tint="@color/blue"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <!--Para los botones de abajo-->
     <LinearLayout
         android:id="@+id/BotonesCA"
         android:layout_width="353dp"

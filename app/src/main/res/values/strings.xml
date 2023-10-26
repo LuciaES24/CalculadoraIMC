@@ -32,4 +32,6 @@
     <string name="logo_Femenino">logo_Femenino</string>
     <string name="resta1">resta1</string>
     <string name="suma1">suma1</string>
+    <string name="edad">Edad</string>
+    <string name="NumeroEdad">0</string>
 </resources>
