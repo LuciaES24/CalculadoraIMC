@@ -165,5 +165,16 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="592dp" />
 
+    <Button
+        android:id="@+id/botonAtrasIMC"
+        android:layout_width="301dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/atras"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@+id/mujer"
+        app:layout_constraintStart_toStartOf="@+id/hombre"
+        app:layout_constraintTop_toBottomOf="@+id/botonResultado" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
