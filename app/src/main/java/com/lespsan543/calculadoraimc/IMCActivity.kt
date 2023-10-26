@@ -71,8 +71,8 @@ class IMCActivity : AppCompatActivity() {
         edadSum.setOnClickListener {  }
         edadRest.setOnClickListener {  }
         //genero
-        masculino.setOnClickListener { elegirGenero() }
-        femenino.setOnClickListener { elegirGenero()}
+        masculino.setOnClickListener { elegirGenero("m") }
+        femenino.setOnClickListener { elegirGenero("f")}
 
 
     }
