@@ -40,7 +40,7 @@ class CalcLuciaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_calc_lucia)
 
         inicializarComponentes()
 
