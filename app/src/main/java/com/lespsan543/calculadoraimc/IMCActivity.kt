@@ -10,10 +10,12 @@ class IMCActivity : AppCompatActivity() {
     lateinit var botonAtras : Button
 
     //peso
+    var peso:Int=0
     lateinit var pesoNum: Button
     lateinit var pesoSum: Button
     lateinit var pesoRest: Button
     //edad
+    var edad: Int = 0
     lateinit var edadNum: Button
     lateinit var edadSum: Button
     lateinit var edadRest: Button
@@ -53,23 +55,37 @@ class IMCActivity : AppCompatActivity() {
     }
 
     /**
-     *
+     * @ param g
      */
-    fun elegirGenero(genero:String){
+    fun elegirGenero(g:String){
+        genero = g
+    }
 
+    fun elegirEdad(op: String){
+        if(op.equals("+")){
+            edad++
+        }else if(op.equals("-")){
+            edad++
+        }
+    }
+
+    private fun elegirPeso(op: String) {
+        if(op.equals("+")){
+            peso++
+        }else if(op.equals("-")){
+            peso--
+        }
     }
 
     fun inicializarListeners(){
         botonResultado.setOnClickListener { pulsarCalcular() }
         botonAtras.setOnClickListener { onBackPressed() }
         //peso
-        pesoNum.setOnClickListener {  }
-        pesoSum.setOnClickListener {  }
-        pesoRest.setOnClickListener {  }
+        pesoSum.setOnClickListener { elegirPeso("+") }
+        pesoRest.setOnClickListener { elegirPeso("-") }
         //edad
-        edadNum.setOnClickListener {  }
-        edadSum.setOnClickListener {  }
-        edadRest.setOnClickListener {  }
+        edadSum.setOnClickListener { elegirEdad("+") }
+        edadRest.setOnClickListener { elegirEdad("-") }
         //genero
         masculino.setOnClickListener { elegirGenero("m") }
         femenino.setOnClickListener { elegirGenero("f")}
