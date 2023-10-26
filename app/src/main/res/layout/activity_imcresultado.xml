@@ -7,27 +7,25 @@
     tools:context=".IMCResultadoActivity">
 
     <LinearLayout
-        android:id="@+id/layoutResultado"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/mostrarResultado"
             android:layout_width="match_parent"
             android:layout_height="147dp"
             android:layout_marginTop="110dp"
-            android:editable="false"/>
+            android:editable="false"></TextView>
 
         <ImageView
             android:id="@+id/imagenResultado"
             android:layout_width="207dp"
             android:layout_height="366dp"
             android:layout_marginTop="80dp"
+            android:src="@drawable/imcbajo"
             app:layout_constraintTop_toBottomOf="@id/mostrarResultado"
-            android:src="@drawable/imcnormal"
-            android:contentDescription="@string/imagensilueta"/>
+            tools:layout_editor_absoluteX="100dp" />
     </LinearLayout>
 
 

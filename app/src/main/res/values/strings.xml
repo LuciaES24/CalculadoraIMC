@@ -28,11 +28,16 @@
     <string name="numeroPeso">0</string>
     <string name="Calcular">Calcular</string>
     <string name="atras">Atras</string>
-    <string name="NumeroAltura">0</string>
+    <string name="NumeroAlturta">0</string>
     <string name="logo_Femenino">logo_Femenino</string>
     <string name="resta1">resta1</string>
     <string name="suma1">suma1</string>
     <string name="edad">Edad</string>
     <string name="NumeroEdad">0</string>
-    <string name="imagensilueta">imagenSilueta</string>
+    <string name="Calculadoras">Calculadoras</string>
+    <string name="calculadora_jose_luis">Calculadora Jose Luis</string>
+    <string name="calculadora_jorge">Calculadora Jorge</string>
+    <string name="calculadora_lucia">Calculadora Lucia</string>
+    <string name="imc">IMC</string>
+    <string name="salir">Salir</string>
 </resources>
