@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.graphics.drawable.toDrawable
 import java.text.DecimalFormat
 
 class IMCResultadoActivity : AppCompatActivity() {
@@ -14,16 +15,19 @@ class IMCResultadoActivity : AppCompatActivity() {
     lateinit var mostrarResultado : TextView
     lateinit var imagenResultado : ImageView
 
-    /**
-     * @param resultadoObtenido double obtenido del activity IMCActivity con el resultado del cálculo
-     */
-    val resultadoObtenido = intent.extras?.getDouble("resultado")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_imcresultado)
 
+        /**
+         * @param resultadoObtenido double obtenido del activity IMCActivity con el resultado del cálculo
+         */
+        val intent = intent.extras
+        val resultadoObtenido = intent?.getDouble("resultado")
+
         inicializarComponentes()
 
+        mostrarResultadoEImagen(resultadoObtenido)
     }
 
     /**
@@ -37,16 +41,16 @@ class IMCResultadoActivity : AppCompatActivity() {
     /**
      * Muestra el texto con el resultado y la imagen dependiendo de la cifra obtenida
      */
-    fun mostrarResultadoEImagen(){
+    fun mostrarResultadoEImagen(resultadoObtenido : Double?){
         val resultado = redondearResultado(resultadoObtenido)
         if (resultado < 18.5){
-
+            imagenResultado.setImageDrawable(R.drawable.imcbajo.toDrawable())
         }else if(resultado >= 18.5 && resultado<=24.9){
-
+            imagenResultado.setImageDrawable(R.drawable.imcnormal.toDrawable())
         }else if(resultado >= 25 && resultado<= 29.9){
-
+            imagenResultado.setImageDrawable(R.drawable.imcalto.toDrawable())
         }else if(resultado>29.9){
-
+            imagenResultado.setImageDrawable(R.drawable.imcmuyalto.toDrawable())
         }
         mostrarResultado.text = "Tu resultado es de $resultado"
     }
