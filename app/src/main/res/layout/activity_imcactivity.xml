@@ -64,7 +64,7 @@
                 android:src="@drawable/_ddec5c682d43f7f034c4858239ffc91" />
             <!--Texto Femenino-->
             <TextView
-                android:id="@+id/texoMujer"
+                android:id="@+id/textoMujer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/mujer"
@@ -189,7 +189,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/edad"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20sp"/>
             <TextView
                 android:id="@+id/TextoEdadNumero"
                 android:layout_width="wrap_content"
@@ -251,7 +251,7 @@
             android:textSize="23sp"
             app:layout_constraintEnd_toEndOf="@+id/altura"
             app:layout_constraintStart_toStartOf="@+id/peso"
-            app:layout_constraintTop_toBottomOf="@+id/botonResultado" />
+            app:layout_constraintTop_toBottomOf="@+id/botonResultado"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
