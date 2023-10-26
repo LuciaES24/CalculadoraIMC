@@ -8,8 +8,19 @@ import android.widget.Button
 class IMCActivity : AppCompatActivity() {
     lateinit var botonResultado : Button
     lateinit var botonAtras : Button
+
+    //peso
+    lateinit var pesoNum: Button
+    lateinit var pesoSum: Button
+    lateinit var pesoRest: Button
+    //edad
+    lateinit var edadNum: Button
+    lateinit var edadSum: Button
+    lateinit var edadRest: Button
+
     var genero: String = ""
     var resultado = 18.23
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_imcactivity)
@@ -22,6 +33,10 @@ class IMCActivity : AppCompatActivity() {
     fun inicializarComponentes(){
         botonResultado = findViewById(R.id.botonResultado)
         botonAtras = findViewById(R.id.botonAtrasIMC)
+
+        //peso
+        //altura
+
     }
 
     fun inicializarListeners(){
