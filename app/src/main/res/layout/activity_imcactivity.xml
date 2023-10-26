@@ -104,10 +104,7 @@
             <com.google.android.material.slider.RangeSlider
                 android:id="@+id/barra"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:stepSize="1.0"
-                app:valueFrom="100.0"
-                app:valueTo="250.0" />
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

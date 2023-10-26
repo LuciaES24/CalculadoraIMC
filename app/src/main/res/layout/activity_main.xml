@@ -6,13 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/calculadoraJoseLuis"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:text="Calculadora Jose Luis"></Button>
+        <Button
+            android:id="@+id/calculadoraJorge"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:text="Calculadora Jorge"></Button>
+        <Button
+            android:id="@+id/calculadoraLucia"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:text="Calculadora Lucia"></Button>
+        <Button
+            android:id="@+id/IMC"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:text="IMC"></Button>
+        <Button
+            android:id="@+id/salir"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:text="Salir"></Button>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -26,11 +26,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun inicializarComponentes(){
-        botonCalcJoseLuis = findViewById(R.id.)
-        botonCalcJorge = findViewById(R.id.)
-        botonCalcLucia = findViewById(R.id.)
-        botonIMC = findViewById(R.id.)
-        botonSalir = findViewById(R.id.)
+        botonCalcJoseLuis = findViewById(R.id.calculadoraJoseLuis)
+        botonCalcJorge = findViewById(R.id.calculadoraJorge)
+        botonCalcLucia = findViewById(R.id.calculadoraLucia)
+        botonIMC = findViewById(R.id.IMC)
+        botonSalir = findViewById(R.id.salir)
     }
 
     fun inicializarListeners(){
