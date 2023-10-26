@@ -8,6 +8,7 @@ import android.widget.Button
 class IMCActivity : AppCompatActivity() {
     lateinit var botonResultado : Button
     lateinit var botonAtras : Button
+    var genero: String = ""
     var resultado = 18.23
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
