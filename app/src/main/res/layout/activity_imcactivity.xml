@@ -17,18 +17,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:cardCornerRadius="8dp">
         <LinearLayout
+            android:id="@+id/cajonHombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center_horizontal">
             <!--Imagen logo masculino-->
             <ImageView
+                android:id="@+id/imagenHombre"
                 android:layout_width="wrap_content"
                 android:layout_height="112dp"
                 android:contentDescription="@string/logo_masculino"
                 android:src="@drawable/male_s_mbolo_svg" />
             <!--Texto masculino-->
             <TextView
+                android:id="@+id/textoHombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/hombre"
@@ -47,18 +50,21 @@
         app:cardCornerRadius="8dp">
 
         <LinearLayout
+            android:id="@+id/cajonMujer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center_horizontal">
             <!--Imagen logo Femenino-->
             <ImageView
+                android:id="@+id/imagenMujer"
                 android:layout_width="148dp"
                 android:layout_height="111dp"
-                android:contentDescription="Image"
+                android:contentDescription="@string/logo_Femenino"
                 android:src="@drawable/_ddec5c682d43f7f034c4858239ffc91" />
             <!--Texto Femenino-->
             <TextView
+                android:id="@+id/texoMujer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/mujer"
@@ -67,7 +73,7 @@
     </androidx.cardview.widget.CardView>
     <!-- Tercer CardView -->
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView3"
+        android:id="@+id/altura"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -78,21 +84,24 @@
         app:cardBackgroundColor="@color/orange"><!--Poner bien el color-->
 
         <LinearLayout
+            android:id="@+id/cajonAltura"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center_horizontal">
 
             <TextView
+                android:id="@+id/TextoAlturaNombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/altura"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
             <TextView
+                android:id="@+id/TextoAlturaNumero"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="120cm"
+                android:text="@string/NumeroAlturta"
                 android:textSize="50sp"
                 android:textColor="@color/white"/>
 
@@ -108,17 +117,18 @@
         android:layout_width="153dp"
         android:layout_height="176dp"
         android:layout_marginTop="28dp"
-
         app:layout_constraintStart_toStartOf="@+id/hombre"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3">
+        app:layout_constraintTop_toBottomOf="@+id/altura">
 
         <LinearLayout
+            android:id="@+id/cajonPeso"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/TextoPesoNombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/peso"
@@ -126,6 +136,7 @@
                 android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/TextoPesoNumero"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/numeroPeso"
@@ -133,20 +144,29 @@
                 android:textSize="50sp" />
 
             <LinearLayout
+                android:id="@+id/cajonBotones1"
                 android:layout_width="153dp"
                 android:layout_height="82dp"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal">
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/boton1Restar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp" />
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/resta1"
+                    android:src="@drawable/baseline_exposure_neg_1_24"
+                    android:tint="@color/orange"/>
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/boton1Sumar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp" />
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/suma1"
+                    android:src="@drawable/baseline_exposure_plus_1_24"
+                    android:tint="@color/blue"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -154,27 +174,35 @@
 
     </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/botonResultado"
-        android:layout_width="301dp"
-        android:layout_height="48dp"
-        android:text="@string/Calcular"
-        android:textSize="23sp"
-        app:layout_constraintEnd_toEndOf="@+id/cardView3"
+    <LinearLayout
+        android:id="@+id/BotonesCA"
+        android:layout_width="353dp"
+        android:layout_height="184dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/altura"
         app:layout_constraintStart_toStartOf="@+id/peso"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="592dp" />
-
-    <Button
-        android:id="@+id/botonAtrasIMC"
-        android:layout_width="301dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="4dp"
-        android:text="@string/atras"
-        android:textSize="23sp"
-        app:layout_constraintEnd_toEndOf="@+id/mujer"
-        app:layout_constraintStart_toStartOf="@+id/hombre"
-        app:layout_constraintTop_toBottomOf="@+id/botonResultado" />
-
+        app:layout_constraintTop_toBottomOf="@+id/peso">
+        <Button
+            android:id="@+id/botonResultado"
+            android:layout_width="301dp"
+            android:layout_height="48dp"
+            android:text="@string/Calcular"
+            android:textSize="23sp"
+            app:layout_constraintEnd_toEndOf="@+id/altura"
+            app:layout_constraintStart_toStartOf="@+id/peso"
+            tools:layout_editor_absoluteY="589dp" />
+        <Button
+            android:id="@+id/botonAtrasIMC"
+            android:layout_width="301dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/atras"
+            android:textSize="23sp"
+            app:layout_constraintEnd_toEndOf="@+id/altura"
+            app:layout_constraintStart_toStartOf="@+id/peso"
+            app:layout_constraintTop_toBottomOf="@+id/botonResultado" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

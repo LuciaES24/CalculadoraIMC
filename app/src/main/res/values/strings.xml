@@ -28,4 +28,8 @@
     <string name="numeroPeso">0</string>
     <string name="Calcular">Calcular</string>
     <string name="atras">Atras</string>
+    <string name="NumeroAlturta">0</string>
+    <string name="logo_Femenino">logo_Femenino</string>
+    <string name="resta1">resta1</string>
+    <string name="suma1">suma1</string>
 </resources>
