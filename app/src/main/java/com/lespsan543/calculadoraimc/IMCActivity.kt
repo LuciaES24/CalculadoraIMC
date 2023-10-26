@@ -36,7 +36,9 @@ class IMCActivity : AppCompatActivity() {
     }
 
 
-
+    /**
+     * inicializa todos los componentes
+     */
     fun inicializarComponentes(){
         botonResultado = findViewById(R.id.botonResultado)
         botonAtras = findViewById(R.id.botonAtrasIMC)
@@ -55,12 +57,18 @@ class IMCActivity : AppCompatActivity() {
     }
 
     /**
-     * @ param g
+     * @ param g se le pasa el tipo de genero
+     * se guarda en la variable global genero la variable pasada por parametros
      */
     fun elegirGenero(g:String){
         genero = g
     }
 
+    /**
+     * @param op se le pasa el tipo de operacion + o -
+     * Si es + se suma 1 a la edad
+     * Si es - se resta 1 a la edad
+     */
     fun elegirEdad(op: String){
         if(op.equals("+")){
             edad++
@@ -69,6 +77,11 @@ class IMCActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * @param op se le pasa el tipo de operacion + o -
+     * Si es + se suma 1 al peso
+     * Si es - se resta 1 al peso
+     */
     private fun elegirPeso(op: String) {
         if(op.equals("+")){
             peso++
@@ -89,8 +102,6 @@ class IMCActivity : AppCompatActivity() {
         //genero
         masculino.setOnClickListener { elegirGenero("m") }
         femenino.setOnClickListener { elegirGenero("f")}
-
-
     }
 
     fun pulsarCalcular(){
