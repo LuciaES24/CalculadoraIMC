@@ -20,4 +20,8 @@
     <string name="btnBorrar"><![CDATA[<]]></string>
     <string name="botonDecimal">.</string>
     <string name="pantalla">%1$s</string>
+    <string name="altura">ALTURA</string>
+    <string name="hombre">HOMBRE</string>
+    <string name="mujer">MUJER</string>
+    <string name="logo_masculino">logo_masculino</string>
 </resources>
