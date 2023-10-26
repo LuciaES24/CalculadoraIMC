@@ -55,7 +55,7 @@ class IMCActivity : AppCompatActivity() {
     /**
      *
      */
-    fun elegirGenero(genero){
+    fun elegirGenero(genero:String){
 
     }
 
