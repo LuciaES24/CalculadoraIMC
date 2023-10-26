@@ -8,7 +8,7 @@ import android.widget.Button
 class IMCActivity : AppCompatActivity() {
     lateinit var botonResultado : Button
     lateinit var botonAtras : Button
-    var resultado = 18.23
+    var resultado = 0.0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_imcactivity)

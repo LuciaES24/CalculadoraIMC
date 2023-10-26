@@ -44,13 +44,17 @@ class IMCResultadoActivity : AppCompatActivity() {
     fun mostrarResultadoEImagen(resultadoObtenido : Double?){
         val resultado = redondearResultado(resultadoObtenido)
         if (resultado < 18.5){
-            imagenResultado.setImageDrawable(R.drawable.imcbajo.toDrawable())
+            val id = getResources().getIdentifier(R.drawable.imcbajo.toString(),null,null)
+            imagenResultado.setImageResource(id)
         }else if(resultado >= 18.5 && resultado<=24.9){
-            imagenResultado.setImageDrawable(R.drawable.imcnormal.toDrawable())
+            val id = getResources().getIdentifier(R.drawable.imcnormal.toString(),null,null)
+            imagenResultado.setImageResource(id)
         }else if(resultado >= 25 && resultado<= 29.9){
-            imagenResultado.setImageDrawable(R.drawable.imcalto.toDrawable())
+            val id = getResources().getIdentifier(R.drawable.imcalto.toString(),null,null)
+            imagenResultado.setImageResource(id)
         }else if(resultado>29.9){
-            imagenResultado.setImageDrawable(R.drawable.imcmuyalto.toDrawable())
+            val id = getResources().getIdentifier(R.drawable.imcmuyalto.toString(),null,null)
+            imagenResultado.setImageResource(id)
         }
         mostrarResultado.text = "Tu resultado es de $resultado"
     }
