@@ -52,7 +52,12 @@ class IMCActivity : AppCompatActivity() {
         femenino = findViewById(R.id.imagenMujer)
     }
 
-    fun
+    /**
+     *
+     */
+    fun elegirGenero(genero){
+
+    }
 
     fun inicializarListeners(){
         botonResultado.setOnClickListener { pulsarCalcular() }
@@ -65,6 +70,9 @@ class IMCActivity : AppCompatActivity() {
         edadNum.setOnClickListener {  }
         edadSum.setOnClickListener {  }
         edadRest.setOnClickListener {  }
+        //genero
+        masculino.setOnClickListener { elegirGenero() }
+        femenino.setOnClickListener { elegirGenero()}
 
 
     }
