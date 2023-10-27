@@ -54,7 +54,7 @@ class IMCActivity : AppCompatActivity() {
 
 
     /**
-     * Inicializa todos los componentes
+     * inicializa todos los componentes
      */
     fun inicializarComponentes(){
         botonResultado = findViewById(R.id.botonResultado)
@@ -76,8 +76,8 @@ class IMCActivity : AppCompatActivity() {
     }
 
     /**
-     * @param g se le pasa el tipo de genero
-     * Se guarda en la variable global genero la variable pasada por parametros
+     * @ param g se le pasa el tipo de genero
+     * se guarda en la variable global genero la variable pasada por parametros
      */
     fun elegirGenero(g:String){
         genero = g
@@ -109,6 +109,13 @@ class IMCActivity : AppCompatActivity() {
             peso--
         }
         pesoNum.text = peso.toString()
+    }
+
+    /**
+     * elige la altura segun el movimiento del rangeSlider
+     */
+    private fun elegirAltura(){
+
     }
 
     /**
