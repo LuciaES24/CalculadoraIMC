@@ -100,11 +100,11 @@
 
             <TextView
                 android:id="@+id/textoAlturaNumero"
-                android:layout_width="21dp"
+                android:layout_width="41dp"
                 android:layout_height="wrap_content"
                 android:text="@string/NumeroAltura"
                 android:textColor="@color/white"
-                android:textSize="50sp" />
+                android:textSize="54sp" />
 
             <com.google.android.material.slider.RangeSlider
                 android:id="@+id/barra"
