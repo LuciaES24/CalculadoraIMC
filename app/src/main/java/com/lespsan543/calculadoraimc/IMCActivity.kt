@@ -11,7 +11,15 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.slider.RangeSlider
 
 class IMCActivity : AppCompatActivity() {
-
+    /**
+     * Creamos una variable para cada elemento del layout
+     *
+     * @param altura guarda la altura introducida por el usuario
+     * @param peso guarda el peso introducido por el usuario
+     * @param edad guarda la edad introducida por el usuario
+     * @param genero guarda el genero introducido por el usuario
+     * @param resultado guarda el resultado del caálculo del IMC del usuario
+     */
     lateinit var botonResultado : Button
     lateinit var botonAtras : Button
     //altura
@@ -110,6 +118,9 @@ class IMCActivity : AppCompatActivity() {
 
     }
 
+    /**
+     * Función para que cada botón realice su función correspondiente al pulsarlo
+     */
     fun inicializarListeners(){
         botonResultado.setOnClickListener { pulsarCalcular() }
         botonAtras.setOnClickListener { onBackPressed() }
@@ -122,11 +133,12 @@ class IMCActivity : AppCompatActivity() {
         //genero
         masculino.setOnClickListener { elegirGenero("m") }
         femenino.setOnClickListener { elegirGenero("f")}
-        //altura
-        alturaNum.setOnClickListener { elegirAltura() }
 
     }
 
+    /**
+     * Obtiene el cálculo del IMC y pasa a la siguiente activity con el resultado
+     */
     fun pulsarCalcular(){
         //Código para obtener el resultado
         val intent = Intent(this,IMCResultadoActivity::class.java)
