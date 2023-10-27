@@ -1,18 +1,17 @@
 package com.lespsan543.calculadoraimc
 
 import android.content.Intent
+import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.cardview.widget.CardView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.slider.RangeSlider
 
 class IMCActivity : AppCompatActivity() {
-    /**
-     * Creamos una variable para cada elemento del layout
-     */
+
     lateinit var botonResultado : Button
     lateinit var botonAtras : Button
     //altura
@@ -22,13 +21,13 @@ class IMCActivity : AppCompatActivity() {
     //peso
     var peso:Int=0
     lateinit var pesoNum: TextView
-    lateinit var pesoSum: Button
-    lateinit var pesoRest: Button
+    lateinit var pesoSum: FloatingActionButton
+    lateinit var pesoRest: FloatingActionButton
     //edad
     var edad: Int = 0
     lateinit var edadNum: TextView
-    lateinit var edadSum: Button
-    lateinit var edadRest: Button
+    lateinit var edadSum: FloatingActionButton
+    lateinit var edadRest: FloatingActionButton
     //genero
     var genero: String = ""
     lateinit var masculino: ImageView
@@ -47,7 +46,7 @@ class IMCActivity : AppCompatActivity() {
 
 
     /**
-     * Función para inicializar cada componente buscandolo por su id en el layout
+     * inicializa todos los componentes
      */
     fun inicializarComponentes(){
         botonResultado = findViewById(R.id.botonResultado)
@@ -69,8 +68,8 @@ class IMCActivity : AppCompatActivity() {
     }
 
     /**
-     * @param g se le pasa el tipo de genero
-     * Se guarda en la variable global genero la variable pasada por parametros
+     * @ param g se le pasa el tipo de genero
+     * se guarda en la variable global genero la variable pasada por parametros
      */
     fun elegirGenero(g:String){
         genero = g
@@ -104,9 +103,6 @@ class IMCActivity : AppCompatActivity() {
         pesoNum.text = peso.toString()
     }
 
-    /**
-     * Función para que cada botón realice su función correspondiente al pulsarlo
-     */
     fun inicializarListeners(){
         botonResultado.setOnClickListener { pulsarCalcular() }
         botonAtras.setOnClickListener { onBackPressed() }
@@ -119,11 +115,9 @@ class IMCActivity : AppCompatActivity() {
         //genero
         masculino.setOnClickListener { elegirGenero("m") }
         femenino.setOnClickListener { elegirGenero("f")}
+
     }
 
-    /**
-     * Obtiene el resultado de IMC y abre la nueva ventana
-     */
     fun pulsarCalcular(){
         //Código para obtener el resultado
         val intent = Intent(this,IMCResultadoActivity::class.java)
