@@ -1,10 +1,13 @@
 package com.lespsan543.calculadoraimc
 
 import android.content.Intent
+import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.slider.RangeSlider
 
 class IMCActivity : AppCompatActivity() {
@@ -18,17 +21,17 @@ class IMCActivity : AppCompatActivity() {
     //peso
     var peso:Int=0
     lateinit var pesoNum: TextView
-    lateinit var pesoSum: Button
-    lateinit var pesoRest: Button
+    lateinit var pesoSum: FloatingActionButton
+    lateinit var pesoRest: FloatingActionButton
     //edad
     var edad: Int = 0
     lateinit var edadNum: TextView
-    lateinit var edadSum: Button
-    lateinit var edadRest: Button
+    lateinit var edadSum: FloatingActionButton
+    lateinit var edadRest: FloatingActionButton
     //genero
     var genero: String = ""
-    lateinit var masculino: Button
-    lateinit var femenino: Button
+    lateinit var masculino: ImageView
+    lateinit var femenino: ImageView
 
     var resultado = 0.0
 
