@@ -5,11 +5,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import com.google.android.material.slider.RangeSlider
 
 class IMCActivity : AppCompatActivity() {
 
     lateinit var botonResultado : Button
     lateinit var botonAtras : Button
+    //altura
+    var altura: Int = 0
+    lateinit var alturaNum: TextView
+    lateinit var alturaBarra: RangeSlider
     //peso
     var peso:Int=0
     lateinit var pesoNum: TextView
@@ -43,12 +48,14 @@ class IMCActivity : AppCompatActivity() {
     fun inicializarComponentes(){
         botonResultado = findViewById(R.id.botonResultado)
         botonAtras = findViewById(R.id.botonAtrasIMC)
-
+        //altura
+        alturaBarra = findViewById(R.id.barra)
+        alturaNum = findViewById(R.id.textoAlturaNumero)
         //peso
         pesoNum = findViewById(R.id.textoPesoNumero)
         pesoSum = findViewById(R.id.boton1Sumar)
         pesoRest = findViewById(R.id.boton1Restar)
-        //altura
+        //edad
         edadNum = findViewById(R.id.textoEdadNumero)
         edadSum = findViewById(R.id.boton2Sumar)
         edadRest = findViewById(R.id.boton2Restar)
