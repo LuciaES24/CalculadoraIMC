@@ -4,18 +4,20 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 
 class IMCActivity : AppCompatActivity() {
+
     lateinit var botonResultado : Button
     lateinit var botonAtras : Button
     //peso
     var peso:Int=0
-    lateinit var pesoNum: Button
+    lateinit var pesoNum: TextView
     lateinit var pesoSum: Button
     lateinit var pesoRest: Button
     //edad
     var edad: Int = 0
-    lateinit var edadNum: Button
+    lateinit var edadNum: TextView
     lateinit var edadSum: Button
     lateinit var edadRest: Button
     //genero
@@ -23,7 +25,7 @@ class IMCActivity : AppCompatActivity() {
     lateinit var masculino: Button
     lateinit var femenino: Button
 
-    var resultado = 18.23
+    var resultado = 0.0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -74,6 +76,7 @@ class IMCActivity : AppCompatActivity() {
         }else if(op == "-"){
             edad--
         }
+        edadNum.text = edad.toString()
     }
 
     /**
@@ -87,6 +90,7 @@ class IMCActivity : AppCompatActivity() {
         }else if(op == "-"){
             peso--
         }
+        pesoNum.text = peso.toString()
     }
 
     fun inicializarListeners(){
