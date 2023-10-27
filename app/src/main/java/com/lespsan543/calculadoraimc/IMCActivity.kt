@@ -4,12 +4,16 @@ import android.content.Intent
 import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatDelegate
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.slider.RangeSlider
+import com.google.android.material.slider.Slider
+import java.time.temporal.ValueRange
+import kotlin.math.abs
 
 class IMCActivity : AppCompatActivity() {
     /**
@@ -91,9 +95,9 @@ class IMCActivity : AppCompatActivity() {
      * Si es - se resta 1 a la edad
      */
     fun elegirEdad(op: String){
-        if(op == "+"){
+        if(op == "+" && edad<112){
             edad++
-        }else if(op == "-"){
+        }else if(op == "-" && edad>0){
             edad--
         }
         edadNum.text = edad.toString()
@@ -105,20 +109,21 @@ class IMCActivity : AppCompatActivity() {
      * Si es - se resta 1 al peso
      */
     private fun elegirPeso(op: String) {
-        if(op == "+"){
+        if(op == "+" ){
             peso++
-        }else if(op == "-"){
+        }else if(op == "-" && peso>0){
             peso--
         }
         pesoNum.text = peso.toString()
     }
 
     /**
-     * elige la altura segun el movimiento del rangeSlider
+     * elige la altura segun los valores del rangeSlider
      */
-    private fun elegirAltura(){
-
+    fun elegirAltura(valor: Float){
+        alturaNum.text = valor.toInt().toString()
     }
+
 
     /**
      * Función para que cada botón realice su función correspondiente al pulsarlo
@@ -135,6 +140,10 @@ class IMCActivity : AppCompatActivity() {
         //genero
         masculino.setOnClickListener { elegirGenero("m") }
         femenino.setOnClickListener { elegirGenero("f")}
+        //altura
+        alturaBarra.addOnChangeListener { slider, value, fromUser ->
+            elegirAltura(value)
+        }
 
     }
 

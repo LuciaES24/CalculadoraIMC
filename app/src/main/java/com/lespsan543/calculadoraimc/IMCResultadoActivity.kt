@@ -36,8 +36,8 @@ class IMCResultadoActivity : AppCompatActivity() {
      * Inicializa cada componente buscandolo por su id en el layout
      */
     fun inicializarComponentes(){
-        mostrarResultado = findViewById(R.id.mostrarResultado)
-        imagenResultado = findViewById(R.id.imagenResultado)
+        //mostrarResultado = findViewById(R.id.mostrarResultado)
+        //imagenResultado = findViewById(R.id.imagenResultado)
     }
 
     /**
