@@ -28,11 +28,11 @@ class IMCActivity : AppCompatActivity() {
     lateinit var botonResultado : Button
     lateinit var botonAtras : Button
     //altura
-    var altura: Int = 0
+    var altura: Double = 0.0
     lateinit var alturaNum: TextView
     lateinit var alturaBarra: RangeSlider
     //peso
-    var peso:Int=0
+    var peso: Double = 0.0
     lateinit var pesoNum: TextView
     lateinit var pesoSum: FloatingActionButton
     lateinit var pesoRest: FloatingActionButton
@@ -114,13 +114,14 @@ class IMCActivity : AppCompatActivity() {
         }else if(op == "-" && peso>0){
             peso--
         }
-        pesoNum.text = peso.toString()
+        pesoNum.text = peso.toInt().toString()
     }
 
     /**
      * elige la altura segun los valores del rangeSlider
      */
     fun elegirAltura(valor: Float){
+        altura = valor.toDouble()
         alturaNum.text = valor.toInt().toString()
     }
 
@@ -138,7 +139,7 @@ class IMCActivity : AppCompatActivity() {
         edadSum.setOnClickListener { elegirEdad("+") }
         edadRest.setOnClickListener { elegirEdad("-") }
         //genero
-        masculino.setOnClickListener { elegirGenero("m") }
+        masculino.setOnClickListener { elegirGenero("m")}
         femenino.setOnClickListener { elegirGenero("f")}
         //altura
         alturaBarra.addOnChangeListener { slider, value, fromUser ->
@@ -148,10 +149,18 @@ class IMCActivity : AppCompatActivity() {
     }
 
     /**
+     * obtiene el resultado de calcular el IMC
+     */
+    fun calcularIMC(){
+        resultado = peso/altura
+    }
+
+    /**
      * Obtiene el cálculo del IMC y pasa a la siguiente activity con el resultado
      */
     fun pulsarCalcular(){
         //Código para obtener el resultado
+        calcularIMC()
         val intent = Intent(this,IMCResultadoActivity::class.java)
         intent.putExtra("resultado",resultado)
         startActivity(intent)
