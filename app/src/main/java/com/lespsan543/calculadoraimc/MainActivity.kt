@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         botonCalcJorge.setOnClickListener { calculadoraJorge() }
         botonCalcLucia.setOnClickListener { calculadoraLucia() }
         botonIMC.setOnClickListener { calculadoraIMC() }
-        botonSalir.setOnClickListener { finish() }
+        botonSalir.setOnClickListener { finishAndRemoveTask() }
     }
 
     /**
