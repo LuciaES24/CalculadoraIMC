@@ -40,6 +40,8 @@ class IMCResultadoActivity : AppCompatActivity() {
 
     /**
      * Muestra el texto con el resultado y la imagen dependiendo de la cifra obtenida
+     *
+     * @param resultadoObtenido double con el resultado de IMC
      */
     fun mostrarResultadoEImagen(resultadoObtenido : Double?){
         val resultado = redondearResultado(resultadoObtenido)

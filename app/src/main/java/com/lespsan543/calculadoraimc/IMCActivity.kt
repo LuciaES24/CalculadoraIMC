@@ -4,11 +4,15 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import com.google.android.material.slider.RangeSlider
 
 class IMCActivity : AppCompatActivity() {
-
+    /**
+     * Creamos una variable para cada elemento del layout
+     */
     lateinit var botonResultado : Button
     lateinit var botonAtras : Button
     //altura
@@ -27,8 +31,8 @@ class IMCActivity : AppCompatActivity() {
     lateinit var edadRest: Button
     //genero
     var genero: String = ""
-    lateinit var masculino: Button
-    lateinit var femenino: Button
+    lateinit var masculino: ImageView
+    lateinit var femenino: ImageView
 
     var resultado = 0.0
 
@@ -43,7 +47,7 @@ class IMCActivity : AppCompatActivity() {
 
 
     /**
-     * inicializa todos los componentes
+     * Función para inicializar cada componente buscandolo por su id en el layout
      */
     fun inicializarComponentes(){
         botonResultado = findViewById(R.id.botonResultado)
@@ -65,8 +69,8 @@ class IMCActivity : AppCompatActivity() {
     }
 
     /**
-     * @ param g se le pasa el tipo de genero
-     * se guarda en la variable global genero la variable pasada por parametros
+     * @param g se le pasa el tipo de genero
+     * Se guarda en la variable global genero la variable pasada por parametros
      */
     fun elegirGenero(g:String){
         genero = g
@@ -100,6 +104,9 @@ class IMCActivity : AppCompatActivity() {
         pesoNum.text = peso.toString()
     }
 
+    /**
+     * Función para que cada botón realice su función correspondiente al pulsarlo
+     */
     fun inicializarListeners(){
         botonResultado.setOnClickListener { pulsarCalcular() }
         botonAtras.setOnClickListener { onBackPressed() }
@@ -112,9 +119,11 @@ class IMCActivity : AppCompatActivity() {
         //genero
         masculino.setOnClickListener { elegirGenero("m") }
         femenino.setOnClickListener { elegirGenero("f")}
-
     }
 
+    /**
+     * Obtiene el resultado de IMC y abre la nueva ventana
+     */
     fun pulsarCalcular(){
         //Código para obtener el resultado
         val intent = Intent(this,IMCResultadoActivity::class.java)
