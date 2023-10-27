@@ -8,7 +8,6 @@ import android.widget.Button
 class IMCActivity : AppCompatActivity() {
     lateinit var botonResultado : Button
     lateinit var botonAtras : Button
-
     //peso
     var peso:Int=0
     lateinit var pesoNum: Button
@@ -70,10 +69,10 @@ class IMCActivity : AppCompatActivity() {
      * Si es - se resta 1 a la edad
      */
     fun elegirEdad(op: String){
-        if(op.equals("+")){
+        if(op == "+"){
             edad++
-        }else if(op.equals("-")){
-            edad++
+        }else if(op == "-"){
+            edad--
         }
     }
 
@@ -83,9 +82,9 @@ class IMCActivity : AppCompatActivity() {
      * Si es - se resta 1 al peso
      */
     private fun elegirPeso(op: String) {
-        if(op.equals("+")){
+        if(op == "+"){
             peso++
-        }else if(op.equals("-")){
+        }else if(op == "-"){
             peso--
         }
     }
@@ -102,12 +101,11 @@ class IMCActivity : AppCompatActivity() {
         //genero
         masculino.setOnClickListener { elegirGenero("m") }
         femenino.setOnClickListener { elegirGenero("f")}
+
     }
 
     fun pulsarCalcular(){
         //Código para obtener el resultado
-
-
         val intent = Intent(this,IMCResultadoActivity::class.java)
         intent.putExtra("resultado",resultado)
         startActivity(intent)

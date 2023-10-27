@@ -102,7 +102,7 @@
                 android:id="@+id/textoAlturaNumero"
                 android:layout_width="21dp"
                 android:layout_height="wrap_content"
-                android:text="@string/NumeroAlturta"
+                android:text="@string/NumeroAltura"
                 android:textColor="@color/white"
                 android:textSize="50sp" />
 
@@ -190,7 +190,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/edad"
                 android:textColor="@color/black"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
             <TextView
                 android:id="@+id/textoEdadNumero"
                 android:layout_width="wrap_content"
@@ -252,7 +252,7 @@
             android:textSize="23sp"
             app:layout_constraintEnd_toEndOf="@+id/altura"
             app:layout_constraintStart_toStartOf="@+id/peso"
-            app:layout_constraintTop_toBottomOf="@+id/botonResultado"/>
+            app:layout_constraintTop_toBottomOf="@+id/botonResultado" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
