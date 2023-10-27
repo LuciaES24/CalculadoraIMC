@@ -103,6 +103,13 @@ class IMCActivity : AppCompatActivity() {
         pesoNum.text = peso.toString()
     }
 
+    /**
+     * elige la altura segun el movimiento del rangeSlider
+     */
+    private fun elegirAltura(){
+
+    }
+
     fun inicializarListeners(){
         botonResultado.setOnClickListener { pulsarCalcular() }
         botonAtras.setOnClickListener { onBackPressed() }
@@ -115,6 +122,8 @@ class IMCActivity : AppCompatActivity() {
         //genero
         masculino.setOnClickListener { elegirGenero("m") }
         femenino.setOnClickListener { elegirGenero("f")}
+        //altura
+        alturaNum.setOnClickListener { elegirAltura() }
 
     }
 
