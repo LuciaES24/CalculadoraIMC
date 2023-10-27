@@ -111,10 +111,10 @@
 
             <TextView
                 android:id="@+id/textoAlturaNumero"
-                android:layout_width="41dp"
+                android:layout_width="217dp"
                 android:layout_height="wrap_content"
-                android:text="@string/NumeroAltura"
                 android:backgroundTint="@color/Beige"
+                android:text="@string/NumeroAltura"
                 android:textColor="@color/black"
                 android:textSize="54sp" />
 
