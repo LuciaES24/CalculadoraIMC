@@ -25,6 +25,9 @@ class MainActivity : AppCompatActivity() {
         inicializarListeners()
     }
 
+    /**
+     * Función para inicializar cada componente buscandolo por su id en el layout
+     */
     fun inicializarComponentes(){
         botonCalcJoseLuis = findViewById(R.id.calculadoraJoseLuis)
         botonCalcJorge = findViewById(R.id.calculadoraJorge)
@@ -33,6 +36,9 @@ class MainActivity : AppCompatActivity() {
         botonSalir = findViewById(R.id.salir)
     }
 
+    /**
+     * Función para que cada botón realice su función correspondiente al pulsarlo
+     */
     fun inicializarListeners(){
         botonCalcJoseLuis.setOnClickListener { calculadoraJoseLuis() }
         botonCalcJorge.setOnClickListener { calculadoraJorge() }
