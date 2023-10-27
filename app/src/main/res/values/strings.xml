@@ -40,4 +40,5 @@
     <string name="calculadora_lucia">Calculadora Lucia</string>
     <string name="imc1">IMC</string>
     <string name="salir">Salir</string>
+    <string name="ResultadoIMC">Resultado</string>
 </resources>
