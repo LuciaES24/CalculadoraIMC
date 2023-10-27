@@ -7,4 +7,8 @@
     <color name="purple">#CE6FE6</color>
     <color name="grey">#7C7373</color>
     <color name="orange">#ff7800</color>
+    <color name="VerdeOscuro">#548C82</color>
+    <color name="VerdeClaro">#D1CE95</color>
+    <color name="Beige">#FCFADE</color>
+    <color name="Oscuro">#452d3d</color>
 </resources>

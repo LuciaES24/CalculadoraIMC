@@ -26,6 +26,7 @@
           android:layout_width="350sp"
           android:layout_height="115dp"
           android:text="@string/calculadora_jose_luis"
+          android:backgroundTint="@color/VerdeOscuro"
           android:textSize="30sp"
           android:layout_marginStart="28dp"/>
 
@@ -34,6 +35,7 @@
           android:layout_width="350dp"
           android:layout_height="115dp"
           android:layout_marginStart="28dp"
+          android:backgroundTint="@color/VerdeOscuro"
           android:text="@string/calculadora_jorge"
           android:textSize="30sp" />
 
@@ -42,6 +44,7 @@
           android:layout_width="350dp"
           android:layout_height="115dp"
           android:text="@string/calculadora_lucia"
+          android:backgroundTint="@color/VerdeOscuro"
           android:textSize="30sp"
           android:layout_marginStart="28dp"/>
    </LinearLayout>
@@ -54,26 +57,29 @@
        android:orientation="vertical"
        tools:layout_editor_absoluteX="0dp"
        tools:ignore="MissingConstraints">
+
       <TextView
-          android:layout_width="match_parent"
+          android:layout_width="402dp"
           android:layout_height="60dp"
-          android:text="@string/imc"
-          android:textSize="40sp"
+          android:layout_margin="10dp"
+          android:text="@string/imc1"
           android:textAlignment="center"
           android:textColor="@color/white"
-          android:layout_margin="10dp"/>
+          android:textSize="40sp" />
       <Button
           android:id="@+id/IMC"
           android:layout_width="350dp"
           android:layout_height="90dp"
           android:layout_marginStart="28dp"
           android:textSize="30sp"
-          android:text="@string/imc"/>
+          android:backgroundTint="@color/VerdeOscuro"
+          android:text="@string/imc1"/>
       <Button
           android:id="@+id/salir"
           android:layout_width="350dp"
           android:layout_height="90dp"
           android:layout_marginStart="28dp"
+          android:backgroundTint="@color/VerdeOscuro"
           android:textSize="30sp"
           android:text="@string/salir"/>
    </LinearLayout>
