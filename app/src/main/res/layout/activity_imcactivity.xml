@@ -75,6 +75,7 @@
                 android:backgroundTint="@color/Beige"
                 android:layout_height="wrap_content"
                 android:text="@string/mujer"
+                android:textColor="@color/black"
                 android:textSize="20sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -173,6 +174,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:contentDescription="@string/resta1"
+                    android:textColor="@color/black"
                     android:src="@drawable/baseline_exposure_neg_1_24"
                     android:backgroundTint="@color/VerdeClaro"
                     android:tint="@color/orange"/>
@@ -183,6 +185,7 @@
                     android:layout_margin="10dp"
                     android:contentDescription="@string/suma1"
                     android:backgroundTint="@color/VerdeClaro"
+                    android:textColor="@color/black"
                     android:src="@drawable/baseline_exposure_plus_1_24"
                     android:tint="@color/blue"/>
             </LinearLayout>
@@ -234,6 +237,7 @@
                     android:layout_margin="10dp"
                     android:contentDescription="@string/resta1"
                     android:backgroundTint="@color/VerdeClaro"
+                    android:textColor="@color/black"
                     android:src="@drawable/baseline_exposure_neg_1_24"
                     android:tint="@color/orange"/>
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -243,6 +247,7 @@
                     android:layout_margin="10dp"
                     android:contentDescription="@string/suma1"
                     android:backgroundTint="@color/VerdeClaro"
+                    android:textColor="@color/black"
                     android:src="@drawable/baseline_exposure_plus_1_24"
                     android:tint="@color/blue"/>
             </LinearLayout>
@@ -268,6 +273,7 @@
             app:layout_constraintEnd_toEndOf="@+id/altura"
             app:layout_constraintStart_toStartOf="@+id/peso"
             android:backgroundTint="@color/VerdeOscuro"
+            android:textColor="@color/white"
             tools:layout_editor_absoluteY="589dp" />
         <Button
             android:id="@+id/botonAtrasIMC"
@@ -279,6 +285,7 @@
             android:backgroundTint="@color/VerdeOscuro"
             app:layout_constraintEnd_toEndOf="@+id/altura"
             app:layout_constraintStart_toStartOf="@+id/peso"
+            android:textColor="@color/white"
             app:layout_constraintTop_toBottomOf="@+id/botonResultado" />
     </LinearLayout>
 
