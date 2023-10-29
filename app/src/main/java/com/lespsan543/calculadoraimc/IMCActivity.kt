@@ -53,7 +53,6 @@ class IMCActivity : AppCompatActivity() {
         inicializarListeners()
     }
 
-
     /**
      * Inicializa todos los componentes
      */
