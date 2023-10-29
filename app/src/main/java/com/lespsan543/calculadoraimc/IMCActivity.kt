@@ -146,7 +146,7 @@ class IMCActivity : AppCompatActivity() {
      * Obtiene el resultado de calcular el IMC
      */
     fun calcularIMC(){
-        altura=altura*0.01
+        altura*=0.01
         resultado = peso/(altura*altura)
 
     }
@@ -159,5 +159,8 @@ class IMCActivity : AppCompatActivity() {
         val intent = Intent(this,IMCResultadoActivity::class.java)
         intent.putExtra("resultado",resultado)
         startActivity(intent)
+        altura = 0.0
+        resultado = 0.0
+        peso = 0.0
     }
 }
