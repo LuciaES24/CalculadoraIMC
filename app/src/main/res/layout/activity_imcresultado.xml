@@ -34,7 +34,7 @@
             android:text="@string/ResultadoIMC"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="50sp" />
+            android:textSize="40sp" />
 
         <ImageView
             android:id="@+id/imagenResultado"

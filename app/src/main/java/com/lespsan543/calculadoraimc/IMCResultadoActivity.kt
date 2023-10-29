@@ -2,6 +2,7 @@ package com.lespsan543.calculadoraimc
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatDelegate
@@ -14,6 +15,7 @@ class IMCResultadoActivity : AppCompatActivity() {
     lateinit var mostrarResultado : TextView
     lateinit var imagenResultado : ImageView
     lateinit var mostrarInfo : TextView
+    lateinit var botonAtras : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +31,8 @@ class IMCResultadoActivity : AppCompatActivity() {
         inicializarComponentes()
 
         mostrarResultadoEImagen(resultadoObtenido)
+
+        botonAtras.setOnClickListener { onBackPressed() }
     }
 
     /**
@@ -38,6 +42,7 @@ class IMCResultadoActivity : AppCompatActivity() {
         mostrarResultado = findViewById(R.id.mostrarResultado)
         imagenResultado = findViewById(R.id.imagenResultado)
         mostrarInfo = findViewById(R.id.mostrarInfo)
+        botonAtras = findViewById(R.id.botonAtrasIMCResultado)
     }
 
     /**
