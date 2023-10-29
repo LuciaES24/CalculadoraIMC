@@ -39,6 +39,7 @@ class CalcJoseLuisActivity : AppCompatActivity() {
 
         inicializarComponentes()
 
+        inicializarListeners()
     }
     fun inicializarComponentes(){
         botonAtras = findViewById(R.id.botonAtrasCalcjoseluis)
@@ -61,5 +62,8 @@ class CalcJoseLuisActivity : AppCompatActivity() {
         division = findViewById(R.id.division)
         igual = findViewById(R.id.resultado)
         borrar = findViewById(R.id.borrar)
+    }
+    fun inicializarListeners(){
+        botonAtras.setOnClickListener { onBackPressed() }
     }
 }
