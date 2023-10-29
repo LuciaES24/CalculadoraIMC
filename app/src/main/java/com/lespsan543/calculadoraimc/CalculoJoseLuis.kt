@@ -7,7 +7,7 @@ class CalculoJoseLuis {
     var num1 = ""
     var num2 = ""
     var operacion = ""
-    var resultado = 0
+    var resultado = 0.0
 
     /**
      * @param num1 pasamos el num1 como int para que se pueda hacer la operacion
@@ -15,7 +15,7 @@ class CalculoJoseLuis {
      * Función que cuando le pasas por parametro dos numeros te hace una suma
      */
 
-    fun suma(num1:Int, num2:Int){
+    fun suma(num1:Double, num2:Double){
         resultado=num1+num2
     }
 
@@ -25,7 +25,7 @@ class CalculoJoseLuis {
      * Función que cuando le pasas por parametro dos numeros te hace una suma
      */
 
-    fun resta(num1:Int, num2:Int){
+    fun resta(num1:Double, num2:Double){
         resultado=num1-num2
     }
 
@@ -35,7 +35,7 @@ class CalculoJoseLuis {
      * Función que cuando le pasas por parametro dos numeros te hace una multiplicacion
      */
 
-    fun multiplicacion(num1:Int, num2:Int){
+    fun multiplicacion(num1:Double, num2:Double){
         resultado=num1*num2
     }
 
@@ -45,7 +45,7 @@ class CalculoJoseLuis {
      * Función que cuando le pasas por parametro dos numeros te hace una division
      */
 
-    fun division(num1:Int, num2:Int){
+    fun division(num1:Double, num2:Double){
         resultado=num1/num2
     }
 
@@ -56,7 +56,7 @@ class CalculoJoseLuis {
     fun reset(){
         num1 = ""
         num2 = ""
-        resultado = 0
+        resultado = 0.0
         operacion = ""
     }
 }
