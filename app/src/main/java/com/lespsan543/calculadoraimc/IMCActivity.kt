@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.content.ContextCompat
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.slider.RangeSlider
 
@@ -81,6 +82,20 @@ class IMCActivity : AppCompatActivity() {
      */
     fun elegirGenero(g:String){
         genero = g
+
+        cambiaColorImagen(g)//cambia el color de fondo de la imagen
+    }
+
+
+    /**
+     * @param se le pasa el tipo de genero
+     * cambia el color de la imagen de fondo si es pulsada
+     */
+    fun cambiaColorImagen(g:String){
+        if(g=="m")
+            masculino.setBackgroundColor(ContextCompat.getColor(this,R.color.Oscuro))
+        else if(g=="f")
+            femenino.setBackgroundColor(ContextCompat.getColor(this,R.color.Oscuro))
     }
 
     /**
@@ -146,7 +161,7 @@ class IMCActivity : AppCompatActivity() {
      * Obtiene el resultado de calcular el IMC
      */
     fun calcularIMC(){
-        resultado = peso/altura
+        resultado = peso/(altura*altura)*0.01
     }
 
     /**
