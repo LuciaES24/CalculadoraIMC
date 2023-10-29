@@ -1,19 +1,14 @@
 package com.lespsan543.calculadoraimc
 
 import android.content.Intent
-import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatDelegate
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.slider.RangeSlider
-import com.google.android.material.slider.Slider
-import java.time.temporal.ValueRange
-import kotlin.math.abs
 
 class IMCActivity : AppCompatActivity() {
     /**
@@ -60,7 +55,7 @@ class IMCActivity : AppCompatActivity() {
 
 
     /**
-     * inicializa todos los componentes
+     * Inicializa todos los componentes
      */
     fun inicializarComponentes(){
         botonResultado = findViewById(R.id.botonResultado)
@@ -82,8 +77,8 @@ class IMCActivity : AppCompatActivity() {
     }
 
     /**
-     * @ param g se le pasa el tipo de genero
-     * se guarda en la variable global genero la variable pasada por parametros
+     * @param g se le pasa el genero
+     * Se guarda en la variable global genero la variable pasada por parametros
      */
     fun elegirGenero(g:String){
         genero = g
@@ -118,7 +113,7 @@ class IMCActivity : AppCompatActivity() {
     }
 
     /**
-     * elige la altura segun los valores del rangeSlider
+     * Elige la altura segun los valores del rangeSlider
      */
     fun elegirAltura(valor: Float){
         altura = valor.toDouble()
@@ -149,7 +144,7 @@ class IMCActivity : AppCompatActivity() {
     }
 
     /**
-     * obtiene el resultado de calcular el IMC
+     * Obtiene el resultado de calcular el IMC
      */
     fun calcularIMC(){
         resultado = peso/altura
@@ -159,7 +154,6 @@ class IMCActivity : AppCompatActivity() {
      * Obtiene el cálculo del IMC y pasa a la siguiente activity con el resultado
      */
     fun pulsarCalcular(){
-        //Código para obtener el resultado
         calcularIMC()
         val intent = Intent(this,IMCResultadoActivity::class.java)
         intent.putExtra("resultado",resultado)

@@ -41,4 +41,5 @@
     <string name="imc1">IMC</string>
     <string name="salir">Salir</string>
     <string name="ResultadoIMC">Resultado</string>
+    <string name="simbolo_atras"><![CDATA[⇐]]></string>
 </resources>

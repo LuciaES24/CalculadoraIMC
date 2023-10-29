@@ -1,12 +1,10 @@
 package com.lespsan543.calculadoraimc
 
-import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.graphics.drawable.toDrawable
 import java.text.DecimalFormat
 
 class IMCResultadoActivity : AppCompatActivity() {
@@ -15,6 +13,7 @@ class IMCResultadoActivity : AppCompatActivity() {
      */
     lateinit var mostrarResultado : TextView
     lateinit var imagenResultado : ImageView
+    lateinit var mostrarInfo : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,8 +35,9 @@ class IMCResultadoActivity : AppCompatActivity() {
      * Inicializa cada componente buscandolo por su id en el layout
      */
     fun inicializarComponentes(){
-        //mostrarResultado = findViewById(R.id.mostrarResultado)
-        //imagenResultado = findViewById(R.id.imagenResultado)
+        mostrarResultado = findViewById(R.id.mostrarResultado)
+        imagenResultado = findViewById(R.id.imagenResultado)
+        mostrarInfo = findViewById(R.id.mostrarInfo)
     }
 
     /**
@@ -50,15 +50,19 @@ class IMCResultadoActivity : AppCompatActivity() {
         if (resultado < 18.5){
             val id = getResources().getIdentifier(R.drawable.imcbajo.toString(),null,null)
             imagenResultado.setImageResource(id)
+            mostrarInfo.text = "Su índice es bajo"
         }else if(resultado >= 18.5 && resultado<=24.9){
             val id = getResources().getIdentifier(R.drawable.imcnormal.toString(),null,null)
             imagenResultado.setImageResource(id)
+            mostrarInfo.text = "Su índice es normal"
         }else if(resultado >= 25 && resultado<= 29.9){
             val id = getResources().getIdentifier(R.drawable.imcalto.toString(),null,null)
             imagenResultado.setImageResource(id)
+            mostrarInfo.text = "Su índice es superior al normal"
         }else if(resultado>29.9){
             val id = getResources().getIdentifier(R.drawable.imcmuyalto.toString(),null,null)
             imagenResultado.setImageResource(id)
+            mostrarInfo.text = "Su índice es bastante superior al normal"
         }
         mostrarResultado.text = "Tu resultado es de $resultado"
     }

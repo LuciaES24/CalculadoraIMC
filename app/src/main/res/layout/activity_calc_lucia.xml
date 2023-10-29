@@ -7,14 +7,26 @@
     tools:context=".CalcLuciaActivity"
     android:layout_gravity="center">
 
+    <Button
+        android:id="@+id/botonAtrasCalcLucia"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@android:color/transparent"
+        android:text="@string/simbolo_atras"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        tools:ignore="MissingConstraints" />
+
     <TextView
         android:id="@+id/mostrarCalculos"
-        android:layout_width="425dp"
-        android:layout_height="222dp"
+        android:layout_width="410dp"
+        android:layout_height="200dp"
         android:editable="false"
         android:minHeight="48dp"
         android:textAlignment="center"
         android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/botonAtrasCalcLucia"
         android:textSize="40sp"
         tools:ignore="MissingConstraints"/>
 
@@ -34,7 +46,8 @@
             android:width="75dp"
             android:height="75dp"
             android:text="@string/boton1"
-            android:textSize="50sp"></Button>
+            android:backgroundTint="@color/VerdeOscuro"
+            android:textSize="50sp"/>
 
         <Button
             android:id="@+id/boton4"
@@ -43,7 +56,8 @@
             android:width="75dp"
             android:height="75dp"
             android:text="@string/boton4"
-            android:textSize="50sp"></Button>
+            android:backgroundTint="@color/VerdeOscuro"
+            android:textSize="50sp"/>
 
         <Button
             android:id="@+id/boton7"
@@ -52,7 +66,8 @@
             android:width="75dp"
             android:height="75dp"
             android:text="@string/boton7"
-            android:textSize="50sp"></Button>
+            android:backgroundTint="@color/VerdeOscuro"
+            android:textSize="50sp"/>
 
         <Button
             android:id="@+id/decimal"
@@ -61,7 +76,8 @@
             android:width="75dp"
             android:height="75dp"
             android:text="@string/botonDecimal"
-            android:textSize="50sp"></Button>
+            android:backgroundTint="@color/VerdeOscuro"
+            android:textSize="50sp"/>
 
     </LinearLayout>
 
@@ -82,7 +98,8 @@
             android:width="75dp"
             android:height="75dp"
             android:text="@string/boton2"
-            android:textSize="50sp"></Button>
+            android:backgroundTint="@color/VerdeOscuro"
+            android:textSize="50sp"/>
 
         <Button
             android:id="@+id/boton5"
@@ -91,7 +108,8 @@
             android:width="75dp"
             android:height="75dp"
             android:text="@string/boton5"
-            android:textSize="50sp"></Button>
+            android:backgroundTint="@color/VerdeOscuro"
+            android:textSize="50sp"/>
 
         <Button
             android:id="@+id/boton8"
@@ -100,7 +118,8 @@
             android:width="75dp"
             android:height="75dp"
             android:text="@string/boton8"
-            android:textSize="50sp"></Button>
+            android:backgroundTint="@color/VerdeOscuro"
+            android:textSize="50sp"/>
 
         <Button
             android:id="@+id/boton0"
@@ -109,7 +128,8 @@
             android:width="75dp"
             android:height="75dp"
             android:text="@string/boton0"
-            android:textSize="50sp"></Button>
+            android:backgroundTint="@color/VerdeOscuro"
+            android:textSize="50sp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -130,7 +150,8 @@
             android:width="75dp"
             android:height="75dp"
             android:text="@string/boton3"
-            android:textSize="50sp"></Button>
+            android:backgroundTint="@color/VerdeOscuro"
+            android:textSize="50sp"/>
 
         <Button
             android:id="@+id/boton6"
@@ -139,7 +160,8 @@
             android:width="75dp"
             android:height="75dp"
             android:text="@string/boton6"
-            android:textSize="50sp"></Button>
+            android:backgroundTint="@color/VerdeOscuro"
+            android:textSize="50sp"/>
 
         <Button
             android:id="@+id/boton9"
@@ -148,7 +170,8 @@
             android:width="75dp"
             android:height="75dp"
             android:text="@string/boton9"
-            android:textSize="50sp"></Button>
+            android:backgroundTint="@color/VerdeOscuro"
+            android:textSize="50sp"/>
 
         <Button
             android:id="@+id/botonRestar"
@@ -157,7 +180,8 @@
             android:width="75dp"
             android:height="75dp"
             android:text="@string/botonRestar"
-            android:textSize="50sp"></Button>
+            android:backgroundTint="@color/VerdeOscuro"
+            android:textSize="50sp"/>
 
     </LinearLayout>
 
@@ -179,7 +203,8 @@
             android:height="75dp"
             android:textColor="@android:color/holo_blue_light"
             android:text="@string/btnBorrar"
-            android:textSize="40sp"></Button>
+            android:backgroundTint="@color/Beige"
+            android:textSize="40sp"/>
 
         <Button
             android:id="@+id/botonDividir"
@@ -188,7 +213,8 @@
             android:width="75dp"
             android:height="75dp"
             android:text="@string/botonDividir"
-            android:textSize="50sp"></Button>
+            android:backgroundTint="@color/VerdeOscuro"
+            android:textSize="50sp"/>
 
         <Button
             android:id="@+id/botonmultiplicar"
@@ -197,7 +223,8 @@
             android:width="75dp"
             android:height="75dp"
             android:text="@string/botonMultiplicar"
-            android:textSize="50sp"></Button>
+            android:backgroundTint="@color/VerdeOscuro"
+            android:textSize="50sp"/>
 
         <Button
             android:id="@+id/botonSumar"
@@ -206,7 +233,8 @@
             android:width="75dp"
             android:height="75dp"
             android:text="@string/botonSuma"
-            android:textSize="50sp"></Button>
+            android:backgroundTint="@color/VerdeOscuro"
+            android:textSize="50sp"/>
 
     </LinearLayout>
 
@@ -228,7 +256,8 @@
             android:text="@string/botonCE"
             android:layout_marginRight="10dp"
             android:textColor="@android:color/holo_red_light"
-            android:textSize="35sp"></Button>
+            android:backgroundTint="@color/Beige"
+            android:textSize="35sp"/>
 
         <Button
             android:id="@+id/botonIgual"
@@ -237,8 +266,8 @@
             android:width="75dp"
             android:height="75dp"
             android:text="@string/botonIgual"
-            android:textColor="@android:color/holo_green_light"
-            android:textSize="50sp"></Button>
+            android:textColor="@android:color/holo_green_dark"
+            android:backgroundTint="@color/Beige" android:textSize="50sp"/>
 
     </LinearLayout>
 

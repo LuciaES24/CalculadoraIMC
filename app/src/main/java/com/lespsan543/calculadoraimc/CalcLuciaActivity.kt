@@ -31,6 +31,7 @@ class CalcLuciaActivity : AppCompatActivity() {
     lateinit var botonIgual : Button
     lateinit var botonDEL : Button
     lateinit var botonCE : Button
+    lateinit var botonAtras : Button
 
     /**
      * @param calculo objeto de la clase Calculo()
@@ -71,6 +72,7 @@ class CalcLuciaActivity : AppCompatActivity() {
         botonIgual = findViewById(R.id.botonIgual)
         botonDEL = findViewById(R.id.DEL)
         botonCE = findViewById(R.id.botonCE)
+        botonAtras = findViewById(R.id.botonAtrasCalcLucia)
     }
 
     /**
@@ -95,6 +97,7 @@ class CalcLuciaActivity : AppCompatActivity() {
         botonIgual.setOnClickListener { pulsarIgual(textoCalcular) }
         botonDEL.setOnClickListener { calculo.pulsarDEL(textoCalcular) }
         botonCE.setOnClickListener { calculo.pulsarCE(textoCalcular) }
+        botonAtras.setOnClickListener { onBackPressed() }
     }
 
     /**

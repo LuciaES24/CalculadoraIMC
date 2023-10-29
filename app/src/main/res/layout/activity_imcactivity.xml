@@ -6,6 +6,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/botonAtrasIMC"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@android:color/transparent"
+        android:text="@string/simbolo_atras"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        tools:ignore="MissingConstraints" />
+
     <!--Primer CardView-->
     <androidx.cardview.widget.CardView
         android:id="@+id/hombre"
@@ -14,7 +27,7 @@
         android:layout_margin="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/mujer"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonAtrasIMC"
         app:cardCornerRadius="8dp">
         <LinearLayout
             android:id="@+id/cajonHombre"
@@ -50,7 +63,7 @@
         android:layout_margin="16dp"
         app:layout_constraintStart_toEndOf="@+id/hombre"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonAtrasIMC"
         app:cardCornerRadius="8dp">
 
         <LinearLayout
@@ -111,9 +124,10 @@
 
             <TextView
                 android:id="@+id/textoAlturaNumero"
-                android:layout_width="200dp"
+                android:layout_width="125dp"
                 android:layout_height="wrap_content"
                 android:text="@string/NumeroAltura"
+                android:textAlignment="center"
                 android:backgroundTint="@color/Beige"
                 android:textColor="@color/black"
                 android:textSize="54sp" />
@@ -123,7 +137,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:valueFrom="60"
-                android:valueTo="300"/>
+                android:valueTo="220"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
     <!--Cuarta CardView-->
@@ -254,39 +268,19 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
     <!--Para los botones de abajo-->
-    <LinearLayout
-        android:id="@+id/BotonesCA"
-        android:layout_width="353dp"
-        android:layout_height="184dp"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:paddingTop="50dp"
-        app:layout_constraintEnd_toEndOf="@+id/altura"
+
+    <Button
+        android:id="@+id/botonResultado"
+        android:layout_width="301dp"
+        android:layout_height="48dp"
+        android:text="@string/Calcular"
+        android:textSize="23sp"
+        android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="@+id/peso"
-        app:layout_constraintTop_toBottomOf="@+id/peso">
-        <Button
-            android:id="@+id/botonResultado"
-            android:layout_width="301dp"
-            android:layout_height="48dp"
-            android:text="@string/Calcular"
-            android:textSize="23sp"
-            app:layout_constraintEnd_toEndOf="@+id/altura"
-            app:layout_constraintStart_toStartOf="@+id/peso"
-            android:backgroundTint="@color/VerdeOscuro"
-            android:textColor="@color/white"
-            tools:layout_editor_absoluteY="589dp" />
-        <Button
-            android:id="@+id/botonAtrasIMC"
-            android:layout_width="301dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="4dp"
-            android:text="@string/atras"
-            android:textSize="23sp"
-            android:backgroundTint="@color/VerdeOscuro"
-            app:layout_constraintEnd_toEndOf="@+id/altura"
-            app:layout_constraintStart_toStartOf="@+id/peso"
-            android:textColor="@color/white"
-            app:layout_constraintTop_toBottomOf="@+id/botonResultado" />
-    </LinearLayout>
+        app:layout_constraintEnd_toEndOf="@+id/edad"
+        app:layout_constraintTop_toBottomOf="@+id/peso"
+        android:backgroundTint="@color/VerdeOscuro"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteY="589dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
