@@ -42,7 +42,7 @@ class IMCActivity : AppCompatActivity() {
     lateinit var masculino: ImageView
     lateinit var femenino: ImageView
 
-    var resultado = 0.0
+    var resultado: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -161,7 +161,7 @@ class IMCActivity : AppCompatActivity() {
      * Obtiene el resultado de calcular el IMC
      */
     fun calcularIMC(){
-        resultado = peso/(altura*altura)*0.01
+        resultado = (peso/(altura*0.01)*(altura*0.01)).toInt()
     }
 
     /**
