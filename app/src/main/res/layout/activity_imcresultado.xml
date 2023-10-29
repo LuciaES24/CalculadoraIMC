@@ -33,7 +33,7 @@
             android:paddingTop="10dp"
             android:backgroundTint="@color/Beige"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="40sp" />
 
         <ImageView
