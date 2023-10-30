@@ -24,7 +24,7 @@
                 android:layout_margin="6dp"
                 android:background="@color/white"
                 android:text="@string/pantalla"
-                android:textSize="140sp"
+                android:textSize="80sp"
                 tools:ignore="TextSizeCheck" />
         </LinearLayout>
 

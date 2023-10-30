@@ -17,11 +17,11 @@ class CalculoJorge {
      * Realiza la llamada al método adecuado para realizar el cálculo solicitado en la calculadora.
      */
     fun calcular() {
-        when (this.operacion) {
-            0 -> this.suma()
-            1 -> this.resta()
-            2 -> this.multiplica()
-            3 -> this.divide()
+        when (operacion) {
+            0 -> suma()
+            1 -> resta()
+            2 -> multiplica()
+            3 -> division()
         }
         this.numCalculos += 1
     }
@@ -50,7 +50,7 @@ class CalculoJorge {
     /**
      * Realiza la división de num1 y num2 y lo almacena en result
      */
-    private fun divide() {
+    private fun division() {
         this.resultado = this.num1 / this.num2
     }
 
@@ -77,7 +77,7 @@ class CalculoJorge {
      * @return String con el símbolo de la operación
      */
     fun operadorTxt(): String {
-        return when (this.operacion) {
+        return when (operacion) {
             0 -> "+"
             1 -> "-"
             2 -> "*"
